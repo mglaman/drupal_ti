@@ -16,7 +16,4 @@ echo $DRUPAL_TI_PHPUNIT_ARGS
 echo "END DEBUGGING"
 
 # Run core tests
-cd core
-echo "WHAT."
-ls ../vendor/bin
-../vendor/bin/phpunit "${ARGS[@]}" "$MODULE_DIR/$DRUPAL_TI_MODULE_NAME/$DRUPAL_TI_PHPUNIT_CORE_SRC_DIRECTORY"
+../bin/phpunit -c core "${ARGS[@]}" "$MODULE_DIR/$DRUPAL_TI_MODULE_NAME/$DRUPAL_TI_PHPUNIT_CORE_SRC_DIRECTORY"
